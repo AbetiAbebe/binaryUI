@@ -1,0 +1,285 @@
+/*
+  01 Typography System
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 
+      / 44 / 52 / 62 / 74 / 86 / 98
+
+      Font Weights:
+      default:400
+
+      Line heights:
+      Default: 1
+      small:1.05
+      paragraph default: 1.6
+
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      --- 02 Colors
+      --
+      -Primary Blue part #10AFED      
+       orange part: #BA3B0A
+
+      -Tints:
+      https://maketintsandshades.com/#10AFED
+      -Shades
+      -Accents
+      -Greys
+      #555
+      #333
+
+      --Border-radius 0.7
+
+      -images: unsplash
+
+      ----Shadows
+
+      ---BorderRadius
+
+      ---whitespace
+
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      -responsive design(fluid layout,responsive units,flexible images, media queries)
+      -fluid layout (use % in stead of width, max-width instead of width)
+      -responsive units (use rem instead of px), rem is root element unit. in html, 
+      default font is 16px. therefore 1 rem= 16 px, but you can change root element default size
+      -flexible images(use % for dimensions , max-width)
+      -media quries
+      -desktop first is good approach than mobile first approach
+
+
+
+      */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /*if we make font size fixed 10px,
+   it will affect user's settings. 
+   default is 16px and 62.5% of 16 is 10. 
+   *this makes 1rem=10px*/
+}
+
+body {
+  font-family: "inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+}
+
+/*---------------------------------------
+-------General-------------------------*/
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #c8623b;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+}
+.btn:hover,
+.btn:active {
+  display: inline-block;
+  background-color: #10afed;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+}
+.btn-light:link,
+.btn-light:visited {
+  display: inline-block;
+  background-color: #f8ebe7;
+  color: #333;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+}
+.btn-light:hover,
+.btn-light:active {
+  display: inline-block;
+  background-color: #10afed;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+}
+
+/*****************Header section***************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  background-color: #f8ebe7;  
+  width: 100%;
+}
+.main-heading {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  justify-items: center;
+}
+
+.second-heading {
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #333;
+  margin-bottom: 3.2rem;
+  letter-spacing: -0.5px;
+  justify-items: center;
+}
+
+/****************Logo**************************/
+
+.logo {
+  height: 6.4rem;
+  display: inline;
+  height: 100%; /*keep the image inside its container*/
+  padding: 1.6rem;
+}
+
+/****************navigation********************/
+/*****  https://ionic.io/ionicons    *********/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  font-size: 1.6rem;
+  justify-content: center;
+}
+.main-nav-list a:link,
+.main-nav-list a:visited {
+  padding-right: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+}
+
+.main-nav-list a:hover,
+.main-nav-list a:active {
+  padding-right: 1.2rem;
+  color: #ba3b0a;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.7rem;
+}
+
+.main-nav-list .login:link,
+.main-nav-list .login:visited {
+  background-color: #c8623b;
+  margin-right: 1.2rem;
+  max-height: 1rem;
+  color: #fff;
+}
+
+.main-nav-list .login:hover,
+.main-nav-list .login:active {
+  background-color: #10afed;
+  margin-right: 1.2rem;
+  color: #fff;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/*************Here section**********/
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  padding: 0 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+.hero-img {
+  width: 100%; /*keep the image inside its container*/
+  margin-bottom: 1.6rem;
+  border-radius: 0.7rem;
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-section {
+  background-color: #cfeffb;
+  padding: 2.4rem 0 9.6rem 0;
+}
+
+/****************************Footer***********************/
+
+.footercontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border-style: solid;
+  margin: 1.7rem 17.5%;
+  border-radius: 0.7rem;
+}
+
+.footercontainer div {
+  height: 12.6rem;
+
+  border-color: #555;
+  border-width: 0.2rem;
+}
+.cosmo-img {
+  width: 100%;
+  height: 100%;
+}
+/*********************************grid section********************/
+.grid {
+  display: grid;
+  gap: 4.8rem;
+}
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+.schema {
+  width: 100%;
+}
+.SQL {
+  padding: 0 20%;
+  margin: 2rem 0;
+}
+.main {
+  margin-top: 140px;
+}
