@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@binarycosmo/core/auth": ["libs/core/auth/src/index.ts"],
+      "@binarycosmo/core/home": ["libs/core/home/src/index.ts"],
+      "@binarycosmo/core/layout": ["libs/core/layout/src/index.ts"],
+      "@binarycosmo/core/shared": ["libs/core/shared/src/index.ts"],
+      "@binarycosmo/core/shared/assets": [
+        "libs/core/shared/assets/src/index.ts"
+      ]
+
+    }
+
+  },
+  "exclude": ["node_modules", "tmp"]
+}
