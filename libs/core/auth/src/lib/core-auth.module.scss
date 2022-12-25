@@ -5,3 +5,105 @@
  * .container {
  * }
 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+}
+
+.auth-container {
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.login-page {
+    height: 100vh;
+}
+
+.login-title {
+    font-size: 19px;
+    padding: 10px;
+}
+
+.login-form {
+    background-color: #ffffffe7;
+    box-shadow: #7d7d7d 0px 0px 10px 1px;
+    padding: 5px;
+    width: 30%;
+    margin-left: auto;
+    margin-top: 100px;
+    // margin-right: 50px;
+}
+
+.user-form-box {
+    width: 90%;
+    margin: 0 2.5%;
+}
+
+.user-form-check {
+    max-width: 80%;
+}
+
+.user-submit-container {
+    margin: auto;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 1050px) and (min-width: 750px) {
+    .auth-container {
+        padding: 100px 0;
+    }
+
+    .login-form {
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (max-width: 750px) and (min-width: 575px) {
+    .auth-container {
+        padding: 100px 0;
+    }
+
+    .login-form {
+        width: 80%;
+        margin: auto;
+        margin-left: 8%;
+
+    }
+
+    .user-form-box {
+        // width: 90%;
+        margin: 0 2.5%;
+    }
+
+}
+
+
+@media only screen and (max-width: 575px) and (min-width: 225px) {
+
+    .auth-container {
+        padding: 100px 0;
+    }
+
+    .login-form {
+        width: 80%;
+        margin: auto;
+        margin-left: 8%;
+
+    }
+
+    .user-form-box {
+        width: 90%;
+        margin: 0 2.5%;
+    }
+
+}
+
+// margin: '0 auto', padding: '30px', backgroundColor: '#ffffff9a', position: 'absolute', width: '40%', marginLeft: '50%'
