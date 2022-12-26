@@ -12,7 +12,7 @@ const { Content } = Layout;
 /* eslint-disable-next-line */
 export interface CoreAuthProps {}
 
-export function Login(props: CoreAuthProps) {
+export function Regiter(props: CoreAuthProps) {
   return (
     <div className={styles['container']}>
       <Layout className={styles['login-page']}>
@@ -32,34 +32,6 @@ export function Login(props: CoreAuthProps) {
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb> */}
             <LoginForm />
-            {/* <RegsitrationForm /> */}
-          </Content>
-          <HomeFooter />
-        </Layout>
-      </Layout>
-    </div>
-  );
-}
-
-export function Register(props: CoreAuthProps) {
-  return (
-    <div className={styles['container']}>
-      <Layout className={styles['login-page']}>
-        {/* <AppsideBar /> */}
-        <Layout>
-          <HomeHeader />
-
-          <Content
-            className={styles['auth-container']}
-            style={{
-              backgroundImage: `url(${HomeBg})`,
-            }}
-          >
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb> */}
             <RegsitrationForm />
           </Content>
           <HomeFooter />
@@ -69,3 +41,4 @@ export function Register(props: CoreAuthProps) {
   );
 }
 
+export default Regiter;

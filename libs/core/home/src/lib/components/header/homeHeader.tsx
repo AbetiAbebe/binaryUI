@@ -35,6 +35,11 @@ const items: MenuProps['items'] = [
     key: 'login',
     icon: <LoginOutlined />,
   },
+  {
+    label: 'Register',
+    key: 'reg',
+    icon: <LoginOutlined />,
+  },
 ];
 
 const { Link } = Anchor;
@@ -54,6 +59,10 @@ export function HomeHeader() {
       case 'sql':
         navigate('/');
         break;
+
+        case 'reg':
+          navigate('/register');
+          break;
 
       default:
         break;

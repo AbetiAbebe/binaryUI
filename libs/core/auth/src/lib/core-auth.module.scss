@@ -34,7 +34,7 @@
     box-shadow: #7d7d7d 0px 0px 10px 1px;
     padding: 5px;
     width: 30%;
-    margin-left: auto;
+    margin-left: 60%;
     margin-top: 100px;
     // margin-right: 50px;
 }
@@ -53,6 +53,11 @@
     padding: 10px;
 }
 
+.create-account {
+    float: right;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
 
 @media only screen and (max-width: 1050px) and (min-width: 750px) {
     .auth-container {
