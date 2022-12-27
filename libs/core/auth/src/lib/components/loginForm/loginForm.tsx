@@ -1,17 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../core-auth.module.scss';
-import { Button, Checkbox, Form, Input, Typography } from 'antd';
+import { Button, Checkbox, Form, Input, notification, Typography } from 'antd';
+import { useLoginMutation } from '../../services/auth';
+import { useNavigate } from 'react-router-dom';
+import { createSelectorHook, useSelector } from 'react-redux';
+import { getError } from '../../state/authSlice';
 
 
 const { Title } = Typography;
 
 export function LoginForm() {
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
+
+  const [login] = useLoginMutation();
+
+  const error = useSelector(getError);
+
+  const [errMsg , setErrMsg] = useState('');
+  const [succMsg , setSuccMsg] = useState('');
+
+  const navigate = useNavigate();
+
+  const onFinish = async (values: any) => {
+    const { userName , password } = values;
+
+    try {
+      const userData: any = await login({userName , password});
+
+      if(userData?.data.data){
+        console.log('Success:', userData);
+        openNotification('Success' ,userData.data.data.message);
+        // openNotification()
+        navigate('/home');
+      }else{
+        console.log('Error:', error);
+
+        openNotification( 'Error', error);
+
+      }
+
+    } catch (err : any) {
+      if(!err?.response){
+        setErrMsg('No Server Response');
+      }else if(err?.status === 400){
+        setErrMsg('Missing Username + Password');
+      }else if(err.data.Message){
+        setErrMsg('Error: {err.data.Message}');
+      }else{
+        setErrMsg('Login Failed!');
+      }
+    }
+
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
+  };
+
+  const openNotification = ( header: string, details: string) => {
+    notification.open({
+      message: header,
+      description: details,
+      onClick: () => {
+        // console.log('Notification Clicked!');
+      },
+      placement : 'top'
+    });
   };
 
   return (
@@ -30,8 +83,8 @@ export function LoginForm() {
         <Form.Item
           // style={{ width: '100%' }}
           label="Username"
-          name="username"
-          rules={[{ required: true, message: 'Please input your username!' }]}
+          name="userName"
+          rules={[{ required: true, message: 'Please input your Username/ Email!' }]}
         >
           <Input className={styles['user-form-box']} />
         </Form.Item>

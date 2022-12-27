@@ -6,13 +6,15 @@ import { Layout, Menu, theme } from 'antd';
 import HomeHeader from 'libs/core/home/src/lib/components/header/homeHeader';
 import HomeFooter from 'libs/core/home/src/lib/components/footer/homeFooter';
 import HomeBg from './assets/img/homePageBg.jpg';
+import { Outlet } from 'react-router-dom';
 
 const { Content } = Layout;
 
 /* eslint-disable-next-line */
 export interface CoreAuthProps {}
 
-export function CoreAuth(props: CoreAuthProps) {
+export function CoreAuth(props: any) {
+  console.log('Props ' , props);
   return (
     <div className={styles['container']}>
       <Layout className={styles['login-page']}>
@@ -26,14 +28,13 @@ export function CoreAuth(props: CoreAuthProps) {
               backgroundImage: `url(${HomeBg})`,
             }}
           >
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb> */}
-            <LoginForm />
-            {/* <RegsitrationForm /> */}
+            {/* <RegsitrationForm  /> */}
+            {/* <LoginForm /> */}
+
+            <Outlet />
+
           </Content>
+
           <HomeFooter />
         </Layout>
       </Layout>

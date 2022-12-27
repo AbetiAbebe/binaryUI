@@ -7,10 +7,15 @@ import { DownloadOutlined } from '@ant-design/icons';
 import HomeBg from '../../assets/img/homePageBg.jpg';
 
 import { Typography,Button, Space } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const { Paragraph, Text, Link } = Typography;
 
-const Page1: React.FC = () => (
+
+export function  Page1() {
+  const navigate = useNavigate();
+
+  return (
   <>
     <Row
       style={{
@@ -57,6 +62,7 @@ const Page1: React.FC = () => (
               shape="round"
               icon={<DownloadOutlined />}
               size={'large'}
+              onClick={()=> navigate("/register")}
             >
               Regsiter
             </Button>
@@ -82,7 +88,7 @@ const Page1: React.FC = () => (
 
     <div
     className={styles['home-mid-left-section']}
-     
+
     >
       <div className={styles['image-content']}>
       {/* <Col span={12}> */}
@@ -107,6 +113,7 @@ const Page1: React.FC = () => (
       </div>
     </div>
   </>
-);
+  );
+};
 
 export default Page1;

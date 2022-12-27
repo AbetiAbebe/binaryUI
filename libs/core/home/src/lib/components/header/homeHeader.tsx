@@ -52,7 +52,7 @@ export function HomeHeader() {
         break;
 
       case 'sql':
-        navigate('/');
+        navigate('/home');
         break;
 
       default:
@@ -67,9 +67,9 @@ export function HomeHeader() {
           <Col className="gutter-row" span={12}>
             {/* <div className="logo"> */}
             {/* <Avatar
-                            size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-                            icon={<AntDesignOutlined />}
-                        /> */}
+                  size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
+                  icon={<AntDesignOutlined />}
+              /> */}
             <Link href="/" title="">
               <Image
               onClick={()=> navigate("/")}
@@ -78,7 +78,7 @@ export function HomeHeader() {
                 width={55}
                 height={55}
                 src={logo_white}
-                
+
               />
               <span className={styles['logo']}>Binary Cosmo</span>
             </Link>
