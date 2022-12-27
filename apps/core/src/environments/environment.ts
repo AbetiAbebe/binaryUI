@@ -3,4 +3,8 @@
 
 export const environment = {
   production: false,
+  api_url: 'http://localhost:5023/api',
+  urls: {
+    api: 'http://localhost:5023/api',
+  },
 };
