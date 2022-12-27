@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { CoreAuth } from '@binarycosmo/core/auth';
+// import { Register } from '@binarycosmo/core/auth';
 import { CoreHome } from '@binarycosmo/core/home';
 import LoginForm from 'libs/core/auth/src/lib/components/loginForm/loginForm';
 import RegsitrationForm from 'libs/core/auth/src/lib/components/registrationForm/registerForm';

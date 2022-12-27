@@ -72,8 +72,7 @@ export function RegsitrationForm() {
   return (
     <div className={styles['login-form']}>
       <Title level={3} className={styles['login-title']}>
-        {' '}
-        Register{' '}
+        Register
       </Title>
       <Form
         style={{ width: '100%' }}

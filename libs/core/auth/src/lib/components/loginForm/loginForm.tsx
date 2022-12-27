@@ -69,7 +69,9 @@ export function LoginForm() {
 
   return (
     <div className={styles['login-form']}>
-      <Title level={3} className={styles['login-title']}>Login here</Title>
+      <Title level={3} className={styles['login-title']}>
+        Login here
+      </Title>
       <Form
         style={{ width: '100%' }}
         name="basic"
@@ -98,16 +100,24 @@ export function LoginForm() {
         </Form.Item>
 
         <Form.Item
-        className={styles['user-form-check']}
+          className={styles['user-form-check']}
           name="remember"
           valuePropName="checked"
           wrapperCol={{ offset: 8, span: 16 }}
         >
-          <Checkbox >Remember me</Checkbox>
+          <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
-        <Form.Item className={styles['user-submit-container']} style={{width: '0'}} wrapperCol={{ offset: 8, span: 16 }}>
-          <Button className={styles['user-submit-btn']}  type="primary" htmlType="submit">
+        <Form.Item
+          className={styles['user-submit-container']}
+          style={{ width: '0' }}
+          wrapperCol={{ offset: 8, span: 16 }}
+        >
+          <Button
+            className={styles['user-submit-btn']}
+            type="primary"
+            htmlType="submit"
+          >
             Submit
           </Button>
         </Form.Item>
