@@ -21,7 +21,8 @@
       "@binarycosmo/core/shared": ["libs/core/shared/src/index.ts"],
       "@binarycosmo/core/shared/assets": [
         "libs/core/shared/assets/src/index.ts"
-      ]
+      ],
+      "@binarycosmo/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
