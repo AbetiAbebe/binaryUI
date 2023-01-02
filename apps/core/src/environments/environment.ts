@@ -3,4 +3,9 @@
 
 export const environment = {
   production: false,
+  api_url: 'http://localhost:5023/api',
+  REACT_APP_STRIPE_PUBLISHABLE_KEY : '',
+  urls: {
+    api: 'http://localhost:5023/api',
+  },
 };

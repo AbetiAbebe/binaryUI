@@ -1,9 +1,19 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, MenuProps } from 'antd';
+import { ConsoleSqlOutlined, SecurityScanOutlined } from '@ant-design/icons';
 
 const { Header} = Layout;
 
 export function  TopHeader () {
+
+  const items: MenuProps['items'] = [
+
+    {
+      label: 'Logout',
+      key: 'logout',
+      icon: <SecurityScanOutlined />,
+    },
+  ];
 
   return (
     <>
@@ -13,13 +23,7 @@ export function  TopHeader () {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['2']}
-          items={new Array(15).fill(null).map((_, index) => {
-            const key = index + 1;
-            return {
-              key,
-              label: `nav ${key}`,
-            };
-          })}
+          items={items}
         />
       </Header>
       <div />
