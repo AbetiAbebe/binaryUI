@@ -5,8 +5,8 @@ export interface CoreCoursesProps {}
 
 export function CoreCourses(props: CoreCoursesProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to CoreCourses!</h1>
+    <div className={styles['']}>
+        
     </div>
   );
 }
