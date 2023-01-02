@@ -5,8 +5,8 @@ import type { RadioChangeEvent } from 'antd';
 import type { ColumnsType, TableProps } from 'antd/es/table';
 import type { SizeType } from 'antd/es/config-provider/SizeContext';
 import type { ExpandableConfig, TableRowSelection } from 'antd/es/table/interface';
-import { CoursesList } from './coursesList';
-import Addcourse from '../addcourse';
+import CoursesList  from './coursesList/coursesList';
+import Addcourse from './addcourse/addcourse';
 
 interface DataType {
   key: number;
@@ -23,7 +23,6 @@ export function Course() {
     <div>
       <div>
         <CoursesList />
-        <Addcourse />
       </div>
      
     </div>

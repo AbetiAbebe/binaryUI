@@ -52,7 +52,7 @@ const data: DataType[] = [
   },
 ];
 
-export const CourseList: React.FC = () => (
+const CourseList: React.FC = () => (
   <Table className={styles['course-item']} dataSource={data}>
     <Column
       title=""
@@ -116,7 +116,6 @@ export const CourseList: React.FC = () => (
       key="action"
       render={(_: any, record: DataType) => (
         <Space size="middle">
-          <a>Add</a>
           <a>Update</a>
           <a>Delete</a>
         </Space>
@@ -124,3 +123,5 @@ export const CourseList: React.FC = () => (
     />
   </Table>
 );
+
+export default CourseList;

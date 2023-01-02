@@ -1,5 +1,5 @@
 import styles from './core-courses.module.scss';
-import Course from './components/coursesList/course';
+import Course from './components/course';
 /* eslint-disable-next-line */
 export interface CoreCoursesProps {}
 
