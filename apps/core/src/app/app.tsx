@@ -15,7 +15,7 @@ import {
 } from 'react-router-dom';
 import { CoreLayout, Dashboard } from '@binarycosmo/core/layout';
 import { CheckOutFront, Shared } from '@binarycosmo/shared';
-import { CoreCourses } from '@binarycosmo/core/courses';
+import { CoreCourses, CourseList } from '@binarycosmo/core/courses';
 
 export function App() {
   return (
@@ -29,7 +29,10 @@ export function App() {
             <Route path="/result" element={<RegistrationResult />}></Route>
           </Route>
           <Route path="/checkout" element={<Shared />}></Route>
-          <Route path="/course" element={<CoreCourses />} />
+          <Route path="/course" element={<CoreCourses />}>
+            <Route path="/course/courseList" element={<CourseList />} />
+          </Route>
+
           <Route path="/" element={<CoreHome />} />
           <Route path="/dashboard" element={<CoreLayout />}>
             <Route path="/dashboard/home" element={<Dashboard />}></Route>
