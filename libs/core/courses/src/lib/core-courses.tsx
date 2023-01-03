@@ -5,6 +5,7 @@ import { CourseDetail } from './components/courseDetail/courseDetail';
 /* eslint-disable-next-line */
 export interface CoreCoursesProps {}
 
+export {Course}
 export function CoreCourses(props: CoreCoursesProps) {
   return (
     <div className={styles['course-container']}>

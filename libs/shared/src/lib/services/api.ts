@@ -41,7 +41,7 @@ export const api = createApi({
    * Tag types must be defined in the original API definition
    * for any tags that would be provided by injected endpoints
    */
-  tagTypes: ['Time', 'Login', 'Register', 'Payment'],
+  tagTypes: ['Time', 'Login', 'Register', 'Payment', 'Course'],
   /**
    * This api has endpoints injected in adjacent files,
    * which is why no endpoints are shown below.
@@ -55,6 +55,5 @@ export const enhancedApi = api.enhanceEndpoints({
     login   : ()  => 'login',
     register: ()  => 'register',
     payment : ()  => 'payment',
-
   }),
 })
