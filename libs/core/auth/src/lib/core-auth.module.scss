@@ -1,18 +1,10 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
-
 * {
     margin: 0;
     padding: 0;
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .auth-container {
@@ -21,7 +13,7 @@
 }
 
 .login-page {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .login-title {
@@ -30,12 +22,13 @@
 }
 
 .login-form {
-    background-color: #ffffffe7;
+    background-color: #ffffff;
     box-shadow: #7d7d7d 0px 0px 10px 1px;
     padding: 5px;
     width: 30%;
     margin-left: 60%;
     margin-top: 100px;
+    border-radius: 10px;
     // margin-right: 50px;
 }
 
@@ -98,9 +91,8 @@
     }
 
     .login-form {
-        width: 80%;
+        width: 95%;
         margin: auto;
-        margin-left: 8%;
 
     }
 

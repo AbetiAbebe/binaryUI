@@ -9,9 +9,9 @@
 
 
 .payment-form-section {
-  width: 30%;
-  margin-left: 60%;
-  padding: 30px;
+  // width: 30%;
+  // margin-left: 60%;
+  // padding: 30px;
   // padding-top: 60px;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 20px;
@@ -23,7 +23,7 @@
   padding: 30px;
   background-color: #ffffff;
   box-shadow: #8a8a8a 0px 0px 13px 2px;
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 
 
@@ -144,9 +144,14 @@
 @media only screen and (max-width: 1050px) and (min-width: 750px) {
 
   .payment-form-section {
-    width: 50%;
-    margin: auto;
+    // width: 50%;
+    // margin: auto;
+
   }
+  .payment-form {
+    width: 100%;
+  }
+
 
 }
 
@@ -155,9 +160,9 @@
 
   .payment-form-section {
 
-    width: 80%;
-    margin: auto;
-    margin-left: 8%;
+    // width: 80%;
+    // margin: auto;
+    // margin-left: 8%;
 
   }
 
@@ -170,10 +175,13 @@
 
 
   .payment-form-section {
-    width: 80%;
-    margin: auto;
+    // width: 80%;
+    // margin: auto;
+    
+  }
 
-
+  .payment-form {
+    padding-left: 20px;
   }
 
 
