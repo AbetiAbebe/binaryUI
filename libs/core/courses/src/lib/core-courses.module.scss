@@ -1,5 +1,9 @@
+.container {
+    display: flex;
+}
+
 .course-container {
-    width: 70%;
+    width: 80%;
     margin: 40px auto;
 }
 
@@ -18,96 +22,159 @@
     font-size: 30px;
 }
 
-@media only screen and (max-width: 970px) {
-    .course-container {
-        width: 40%;
-        margin: 40px 1%;
+.course-detail-head {
+    max-width: 70%;
+    box-shadow: #b3b3b3 0px 0px 16px 3px;
+    border-radius: 20px;
+}
+
+
+.course-banner {
+    // width: 50%;
+}
+
+.padding {
+    width: 50%;
+}
+
+
+.course-item-detail {
+    // box-shadow: #c7c7c7 0px 0px 15px 2px;
+    border-radius: 40px;
+
+}
+
+
+.course-name-detail {
+    font-size: 1.5vw;
+}
+
+.course-detail-mid {
+    max-width: 70%;
+    margin-top: 40px;
+    box-shadow: #b3b3b3 0px 0px 16px 3px;
+    border-radius: 20px;
+
+}
+
+
+
+.course-description-detail {
+    font-size: 18px;
+
+}
+
+.course-duration-detail {
+    text-align: left;
+    width: 70%;
+}
+
+.course-detail-info-section {
+    margin-top: 40px;
+    width: 60%;
+}
+
+.checkout-section {
+    width: 40%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.course-price-detail {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.course-price-detail-figure {
+    font-size: 30px;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+    .course-detail-mid {
+        max-width: 100%;
+        // margin: 40px 1%;
     }
 
     .course-description {
         display: none;
     }
 
+    .course-name-detail {
+        font-size: 3vw;
+    }
+
+    .course-detail-head {
+        max-width: 100%;
+    }
+
+    .checkout-section {
+        margin: 50px;
+        max-width: unset;
+    }
 
 }
 
+@media only screen and (max-width: 760px) {
+    .course-container {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    // .course-detail-head {
+    //     width: 70%;
+    //     box-shadow: #b3b3b3 0px 0px 16px 3px;
+    //     border-radius: 20px;
+    // }
+    .container {
+        flex-direction: column;
+    }
+
+    .course-detail-info-section {
+        width: 70%;
+        margin: auto;
+    }
+
+    .checkout-section {
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+    }
 
 
 
-// import React from 'react';
-// import { Space, Table, Tag } from 'antd';
+}
 
-// const { Column, ColumnGroup } = Table;
+@media only screen and (max-width: 530px) {
+    .course-detail-mid {
+        max-width: 100%;
+        margin-top: 40px;
+        box-shadow: #b3b3b3 0px 0px 16px 3px;
+        border-radius: 20px;
 
-// interface DataType {
-//   key: React.Key;
-//   firstName: string;
-//   lastName: string;
-//   age: number;
-//   address: string;
-//   tags: string[];
-// }
+    }
 
-// const data: DataType[] = [
-//   {
-//     key: '1',
-//     firstName: 'John',
-//     lastName: 'Brown',
-//     age: 32,
-//     address: 'New York No. 1 Lake Park',
-//     tags: ['nice', 'developer'],
-//   },
-//   {
-//     key: '2',
-//     firstName: 'Jim',
-//     lastName: 'Green',
-//     age: 42,
-//     address: 'London No. 1 Lake Park',
-//     tags: ['loser'],
-//   },
-//   {
-//     key: '3',
-//     firstName: 'Joe',
-//     lastName: 'Black',
-//     age: 32,
-//     address: 'Sidney No. 1 Lake Park',
-//     tags: ['cool', 'teacher'],
-//   },
-// ];
+    .course-detail-head {
+        width: 100%;
+    }
 
-// const App: React.FC = () => (
-//   <Table dataSource={data}>
-//     <ColumnGroup title="Name">
-//       <Column title="First Name" dataIndex="firstName" key="firstName" />
-//       <Column title="Last Name" dataIndex="lastName" key="lastName" />
-//     </ColumnGroup>
-//     <Column title="Age" dataIndex="age" key="age" />
-//     <Column title="Address" dataIndex="address" key="address" />
-//     <Column
-//       title="Tags"
-//       dataIndex="tags"
-//       key="tags"
-//       render={(tags: string[]) => (
-//         <>
-//           {tags.map((tag) => (
-//             <Tag color="blue" key={tag}>
-//               {tag}
-//             </Tag>
-//           ))}
-//         </>
-//       )}
-//     />
-//     <Column
-//       title="Action"
-//       key="action"
-//       render={(_: any, record: DataType) => (
-//         <Space size="middle">
-//           <a>Invite {record.lastName}</a>
-//           <a>Delete</a>
-//         </Space>
-//       )}
-//     />
-//   </Table>
-// );
+    .course-name-detail {
+        font-size: 3vw;
+    }
 
-// export default App;
+    .course-detail-info-section {
+        width: 99%;
+        margin: auto;
+        min-width: 250px;
+    }
+
+    .checkout-section {
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        min-width: 250px;
+    }
+
+
+}
