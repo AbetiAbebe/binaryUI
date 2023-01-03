@@ -77,10 +77,13 @@ export function  CoreLayout () {
 
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key);
-    // console.log('l', logo_white.toString());
+    console.log('l', e.key);
     switch (e.key) {
       case 'logout':
         navigate('/home');
+        break;
+      case 'courseMgmt':
+        navigate('/dashboard/course');
         break;
       default:
         break;
@@ -101,6 +104,7 @@ export function  CoreLayout () {
             defaultSelectedKeys={['1']}
             defaultOpenKeys={['sub1']}
             items={items2}
+            onClick={onClick}
           />
         </Sider>
       <Layout className="layout">

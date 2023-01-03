@@ -1,12 +1,13 @@
 import styles from './core-courses.module.scss';
-import Course from './components/course';
+import CoursesList from './components/coursesList/coursesList';
 /* eslint-disable-next-line */
 export interface CoreCoursesProps {}
 
-export {Course}
+
 export function CoreCourses(props: CoreCoursesProps) {
   return (
     <div className={styles['']}>
+      <CoursesList />
     </div>
   );
 }

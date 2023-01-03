@@ -26,7 +26,7 @@ const initialState: Course = {
         author: ''
       },
     courseError: null,
-   courseMessage: '' 
+   courseMessage: ''
 };
 
 export const courseSlice = createSlice({
@@ -44,10 +44,10 @@ export const courseSlice = createSlice({
         (state, action: any) => {
           console.log('fulfilled', action);
           state.course = action.payload.id;
-          state.courseName = action.payload.data;
-          state.token = action.payload.token;
-          state.loginStatus = true;
-          state.error = action.payload.message;
+          // state.course.name = action.payload.data;
+          // state.token = action.payload.token;
+          // state.loginStatus = true;
+          // state.error = action.payload.message;
         }
       );
   },
