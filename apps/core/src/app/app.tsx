@@ -21,7 +21,11 @@ export function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<CoreHome />}></Route>
+          <Route path="/*" >
+            <Route index element={<CoreHome />} />
+          </Route>
+
+          <Route path="/home" element={<CoreHome />}> </Route>
           <Route path="/" element={<CoreAuth />}>
             <Route path="/login" element={<LoginForm />}></Route>
             <Route path="/register" element={<RegistrationForm />}></Route>
@@ -29,7 +33,6 @@ export function App() {
           </Route>
           <Route path="/checkout" element={<Shared />}></Route>
 
-          <Route path="/" element={<CoreHome />} />
           <Route path="/dashboard" element={<CoreLayout />}>
             <Route path="/dashboard/home" element={<Dashboard />}></Route>
             <Route path="/dashboard/studList"  element={<RegistrationForm />}></Route>

@@ -1,5 +1,4 @@
 import styles from './core-courses.module.scss';
-import { CourseList } from './components/coursesList/coursesList';
 import { CourseDetail } from './components/courseDetail/courseDetail';
 
 /* eslint-disable-next-line */
