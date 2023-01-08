@@ -2,7 +2,7 @@ import styles from './core-auth.module.scss';
 import React from 'react';
 import { Layout } from 'antd';
 import { HomeHeader, HomeFooter} from '@binarycosmo/core/home';
-import HomeBg from './assets/img/homePageBg.jpg';
+import HomeBg from './assets/img/login-and-signup-bg.jpg';
 import { Outlet } from 'react-router-dom';
 
 const { Content } = Layout;

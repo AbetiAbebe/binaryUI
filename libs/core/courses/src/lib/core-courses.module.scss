@@ -1,7 +1,180 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+    display: flex;
+}
+
+.course-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.course-item {
+    // box-shadow: #9d9d9d 0px 0px 13px 2px;
+    border-radius: 10px;
+}
+
+.course-name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.price {
+    font-size: 30px;
+}
+
+.course-detail-head {
+    max-width: 70%;
+    box-shadow: #b3b3b3 0px 0px 16px 3px;
+    border-radius: 20px;
+}
+
+
+.course-banner {
+    // width: 50%;
+}
+
+.padding {
+    width: 50%;
+}
+
+
+.course-item-detail {
+    // box-shadow: #c7c7c7 0px 0px 15px 2px;
+    border-radius: 40px;
+
+}
+
+
+.course-name-detail {
+    font-size: 1.5vw;
+}
+
+.course-detail-mid {
+    max-width: 70%;
+    margin-top: 40px;
+    box-shadow: #b3b3b3 0px 0px 16px 3px;
+    border-radius: 20px;
+
+}
+
+
+
+.course-description-detail {
+    font-size: 18px;
+
+}
+
+.course-duration-detail {
+    text-align: left;
+    width: 70%;
+}
+
+.course-detail-info-section {
+    margin-top: 40px;
+    width: 60%;
+}
+
+.checkout-section {
+    width: 40%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.course-price-detail {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.course-price-detail-figure {
+    font-size: 30px;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+    .course-detail-mid {
+        max-width: 100%;
+        // margin: 40px 1%;
+    }
+
+    .course-description {
+        display: none;
+    }
+
+    .course-name-detail {
+        font-size: 3vw;
+    }
+
+    .course-detail-head {
+        max-width: 100%;
+    }
+
+    .checkout-section {
+        margin: 50px;
+        max-width: unset;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .course-container {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    // .course-detail-head {
+    //     width: 70%;
+    //     box-shadow: #b3b3b3 0px 0px 16px 3px;
+    //     border-radius: 20px;
+    // }
+    .container {
+        flex-direction: column;
+    }
+
+    .course-detail-info-section {
+        width: 70%;
+        margin: auto;
+    }
+
+    .checkout-section {
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 530px) {
+    .course-detail-mid {
+        max-width: 100%;
+        margin-top: 40px;
+        box-shadow: #b3b3b3 0px 0px 16px 3px;
+        border-radius: 20px;
+
+    }
+
+    .course-detail-head {
+        width: 100%;
+    }
+
+    .course-name-detail {
+        font-size: 3vw;
+    }
+
+    .course-detail-info-section {
+        width: 99%;
+        margin: auto;
+        min-width: 250px;
+    }
+
+    .checkout-section {
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        min-width: 250px;
+    }
+
+
+}

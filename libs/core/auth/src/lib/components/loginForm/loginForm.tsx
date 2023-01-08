@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styles from '../../core-auth.module.scss';
-import { Button, Checkbox, Form, Input, notification, Typography } from 'antd';
+import { Button, Checkbox, Form, Input, notification, Typography, Anchor } from 'antd';
 import { useLoginMutation } from '../../services/auth';
 import { useNavigate } from 'react-router-dom';
 import { createSelectorHook, useSelector } from 'react-redux';
 import { getLoginError } from '../../state/authSlice';
-
+import { Link } from '@chakra-ui/react';
 
 const { Title } = Typography;
+// const { Link } = Anchor;
 
 export function LoginForm() {
 
@@ -110,16 +111,25 @@ export function LoginForm() {
 
         <Form.Item
           className={styles['user-submit-container']}
-          style={{ width: '0' }}
-          wrapperCol={{ offset: 8, span: 16 }}
+          // style={{ width: '0' }}
+          wrapperCol={{ offset: 5, span: 16 }}
         >
-          <Button
+          <button
             className={styles['user-submit-btn']}
-            type="primary"
-            htmlType="submit"
+            
+            type="submit"
           >
-            Submit
-          </Button>
+            Login
+          </button>
+          <div className={styles['create-acc-container']}>
+            <p>Don't have an accout</p>
+            <Link className={styles['user-submit-link']} onClick={()=> {
+              navigate('/register');
+            }} 
+            title="">
+              click here
+            </Link>
+          </div>
         </Form.Item>
       </Form>
     </div>
