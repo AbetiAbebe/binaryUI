@@ -15,11 +15,14 @@ import {
 } from 'react-router-dom';
 import { CoreLayout, Dashboard } from '@binarycosmo/core/layout';
 import { CheckOutFront, Shared } from '@binarycosmo/shared';
-import { CoreCourses, Course } from '@binarycosmo/core/courses';
+import { CoreCourses } from '@binarycosmo/core/courses';
+import { ChakraProvider } from '@chakra-ui/react';
+
 
 export function App() {
   return (
     <>
+<ChakraProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<CoreHome />}></Route>
@@ -30,9 +33,7 @@ export function App() {
           </Route>
           <Route path="/checkout" element={<Shared />}></Route>
 
-          
-          <Route path="/course" element={<Course />} />
-
+        
           <Route path="/" element={<CoreHome />} />
           <Route path="/dashboard" element={<CoreLayout />}>
             <Route path="/dashboard/home" element={<Dashboard />}></Route>
@@ -43,7 +44,8 @@ export function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <div />
+
+      </ChakraProvider>
     </>
   );
 }

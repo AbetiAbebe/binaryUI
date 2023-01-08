@@ -1,63 +1,84 @@
 import React, { useState } from 'react';
 import styles from '../../core-auth.module.scss';
-import { Button, Checkbox, Form, Input, notification, Select, Typography } from 'antd';
+import {
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  notification,
+  Select,
+  Typography,
+  Anchor,
+} from 'antd';
 import { useRegisterMutation } from '../../services/auth';
 import { getRegistrationError } from '../../state/registrationSlice';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getStatus } from '../../state/registrationSlice';
+import { Link } from '@chakra-ui/react';
 
 const { Title } = Typography;
 const { Option } = Select;
-
+// const { Link } = Anchor;
 
 export function RegistrationForm() {
-
   const [Register] = useRegisterMutation();
   // const error = useSelector(getRegistrationError);
-  const [errMsg , setErrMsg] = useState('');
-  const [succMsg , setSuccMsg] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const [succMsg, setSuccMsg] = useState('');
 
   const navigate = useNavigate();
   const status = useSelector(getStatus);
   const message = useSelector(getRegistrationError);
 
-  const onFinish =  async (values: any) => {
+  const onFinish = async (values: any) => {
     console.log('Success:', values);
-    const { firstName, lastName , userName, password, confirmPassword, gender, email } = values;
+    const {
+      firstName,
+      lastName,
+      userName,
+      password,
+      confirmPassword,
+      gender,
+      email,
+    } = values;
     try {
-      const userData: any = await Register({firstName, lastName ,userName, password, confirmPassword, gender, email });
+      const userData: any = await Register({
+        firstName,
+        lastName,
+        userName,
+        password,
+        confirmPassword,
+        gender,
+        email,
+      });
       console.log('Const:', userData);
 
-      if(userData?.data.data.Succeeded){
+      if (userData?.data.data.Succeeded) {
         // openNotification('Success' ,userData.data.data.message.toString());
-
-      }else{
+      } else {
         console.log('Const Error:', userData.error.data.Message);
-        openNotification( 'Error', userData.error.data.Message);
+        openNotification('Error', userData.error.data.Message);
         navigate('/result');
       }
-
-    } catch (err : any) {
-      if(!err?.response){
+    } catch (err: any) {
+      if (!err?.response) {
         setErrMsg('No Server Response');
-      }else if(err?.status === 400){
+      } else if (err?.status === 400) {
         setErrMsg('Missing Username + Password');
-      }else if(err.data.Message){
+      } else if (err.data.Message) {
         setErrMsg('Error: {err.data.Message}');
-      }else{
+      } else {
         setErrMsg('Login Failed!');
       }
     }
   };
 
-
-
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
 
-  const openNotification = ( header: string, details: string) => {
+  const openNotification = (header: string, details: string) => {
     notification.open({
       message: header,
       description: details,
@@ -65,14 +86,14 @@ export function RegistrationForm() {
         // console.log('Notification Clicked!');
         // notification.close();
       },
-      placement : 'top'
+      placement: 'top',
     });
   };
 
   return (
     <div className={styles['login-form']}>
       <Title level={3} className={styles['login-title']}>
-        Register
+        Sign Up
       </Title>
       <Form
         style={{ width: '100%' }}
@@ -111,7 +132,13 @@ export function RegistrationForm() {
         <Form.Item
           label="Email"
           name="email"
-          rules={[{ type: 'email', required: true, message: 'Please input your Email!' }]}
+          rules={[
+            {
+              type: 'email',
+              required: true,
+              message: 'Please input your Email!',
+            },
+          ]}
         >
           <Input className={styles['user-form-box']} />
         </Form.Item>
@@ -151,7 +178,9 @@ export function RegistrationForm() {
                 if (!value || getFieldValue('password') === value) {
                   return Promise.resolve();
                 }
-                return Promise.reject(new Error('The two passwords that you entered do not match!'));
+                return Promise.reject(
+                  new Error('The two passwords that you entered do not match!')
+                );
               },
             }),
           ]}
@@ -161,16 +190,24 @@ export function RegistrationForm() {
 
         <Form.Item
           className={styles['user-submit-container']}
-          style={{ width: '0' }}
-          wrapperCol={{ offset: 8, span: 16 }}
+          wrapperCol={{ offset: 6, span: 30 }}
         >
-          <Button
+          <button
             className={styles['user-submit-btn']}
-            type="primary"
-            htmlType="submit"
+            // type="primary"
+            type="submit"
           >
-            Register
-          </Button>
+            Sign Up
+          </button>
+          <div className={styles['create-acc-container']}>
+            <p>Already have an accout</p>
+            <Link className={styles['user-submit-link']} onClick={()=> {
+              navigate('/login');
+            }} 
+            title="">
+              click here
+            </Link>
+          </div>
         </Form.Item>
       </Form>
     </div>

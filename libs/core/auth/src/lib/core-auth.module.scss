@@ -10,10 +10,11 @@
 .auth-container {
     background-position: center bottom;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .login-page {
-    min-height: 100vh;
+    min-height: 140vh;
 }
 
 .login-title {
@@ -25,7 +26,7 @@
     background-color: #ffffff;
     box-shadow: #7d7d7d 0px 0px 10px 1px;
     padding: 5px;
-    width: 30%;
+    width: 34%;
     margin-left: 60%;
     margin-top: 100px;
     border-radius: 10px;
@@ -42,8 +43,35 @@
 }
 
 .user-submit-container {
-    margin: auto;
+    width: 80%;
+    margin: 0 0;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    // background-color: #7d7d7d;
+}
+
+.create-acc-container {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.user-submit-link {
+    text-decoration: none;
+    padding-left: 4px;
+    color: #14aadc;
+}
+
+.user-submit-btn {
+    width: 90%;
+    background-color: #d6a458;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 3px;
 }
 
 .create-account {
@@ -52,7 +80,19 @@
     margin-bottom: 30px;
 }
 
-@media only screen and (max-width: 1050px) and (min-width: 750px) {
+@media only screen and (max-width: 1063px) and (min-width: 750px) {
+
+    // .login-form {
+    //     background-color: #ffffff;
+    //     box-shadow: #7d7d7d 0px 0px 10px 1px;
+    //     padding: 5px;
+    //     width: 30%;
+    //     margin-left: 60%;
+    //     margin-top: 100px;
+    //     border-radius: 10px;
+    //     // margin-right: 50px;
+    // } 
+
     .auth-container {
         padding: 100px 0;
     }
@@ -85,13 +125,12 @@
 
 
 @media only screen and (max-width: 575px) and (min-width: 225px) {
-
     .auth-container {
         padding: 100px 0;
     }
 
     .login-form {
-        width: 95%;
+        width: 90%;
         margin: auto;
 
     }
@@ -102,5 +141,18 @@
     }
 
 }
+
+@media only screen and (max-width: 323px) {
+
+    .create-acc-container p {
+        font-size: 4vw;
+    }
+
+    .user-submit-link {
+        font-size: 4vw;
+    }
+}
+
+
 
 // margin: '0 auto', padding: '30px', backgroundColor: '#ffffff9a', position: 'absolute', width: '40%', marginLeft: '50%'
